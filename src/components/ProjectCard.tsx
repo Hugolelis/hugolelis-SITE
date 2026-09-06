@@ -14,6 +14,7 @@ const TYPE_STYLE: Record<Project['type'], { dot: string; label: string }> = {
   CLI:   { dot: styles.dotCli,   label: 'CLI' },
   WEB:   { dot: styles.dotWeb,   label: 'WEB' },
   LIB:   { dot: styles.dotLib,   label: 'LIB' },
+  TOOL:  { dot: styles.dotTool,  label: 'TOOL' },
   OTHER: { dot: styles.dotOther, label: '' },
 }
 

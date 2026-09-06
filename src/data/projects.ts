@@ -40,4 +40,17 @@ export const projects: Project[] = [
     link: 'https://github.com/Hugolelis/Lexio-CLI',
     image: '/projects/lexio.png',
   },
+  {
+    id: 4,
+    title: { pt: 'QrCode', en: 'QrCode' },
+    tag: 'C++ · Reed-Solomon · Galois Field',
+    type: 'TOOL',
+    description: {
+      pt: 'Gerador de QR Code em C++ implementado do zero, com codificação Reed-Solomon, aritmética em corpo de Galois, montagem da matriz e exportação para PNG/PBM.',
+      en: 'QR Code generator built from scratch in C++, implementing Reed-Solomon error correction, Galois field arithmetic, matrix placement, and PNG/PBM export.',
+    },
+    year: '2026',
+    link: 'https://github.com/Hugolelis/qrcode-TOOL',
+    image: '/projects/qrcode.png',
+  },
 ]
