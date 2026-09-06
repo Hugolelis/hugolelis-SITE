@@ -9,13 +9,13 @@ interface Props {
   translations: Translations['projects']
 }
 
-const TYPE_STYLE: Record<Project['type'], { dot: string; label: string }> = {
-  API:   { dot: styles.dotApi,   label: 'API' },
-  CLI:   { dot: styles.dotCli,   label: 'CLI' },
-  WEB:   { dot: styles.dotWeb,   label: 'WEB' },
-  LIB:   { dot: styles.dotLib,   label: 'LIB' },
-  TOOL:  { dot: styles.dotTool,  label: 'TOOL' },
-  OTHER: { dot: styles.dotOther, label: '' },
+const TYPE_STYLE: Record<Project['type'], { dot: string; preview: string; label: string }> = {
+  API:   { dot: styles.dotApi,   preview: styles.previewApi,     label: 'API' },
+  CLI:   { dot: styles.dotCli,   preview: styles.previewCli,     label: 'CLI' },
+  WEB:   { dot: styles.dotWeb,   preview: styles.previewApi,     label: 'WEB' },
+  LIB:   { dot: styles.dotLib,   preview: styles.previewDefault, label: 'LIB' },
+  TOOL:  { dot: styles.dotTool,  preview: styles.previewTool,    label: 'TOOL' },
+  OTHER: { dot: styles.dotOther, preview: styles.previewDefault, label: 'OTHER' },
 }
 
 export function ProjectCard({ project, lang, translations }: Props) {
@@ -34,21 +34,9 @@ export function ProjectCard({ project, lang, translations }: Props) {
           <span className={styles.year}>{project.year}</span>
         </div>
         <h3 className={styles.title}>{title}</h3>
-        {project.image ? (
-          <div className={styles.media}>
-            <img src={project.image} alt={title} loading="lazy" />
-          </div>
-        ) : (
-          <div className={`${styles.media} ${styles.mediaFallback}`}>
-            <img
-              className={styles.fallbackImage}
-              src="/project-placeholder.svg"
-              alt=""
-              aria-hidden="true"
-            />
-            <span className={styles.badge}>{t.label}</span>
-          </div>
-        )}
+        <div className={`${styles.media} ${t.preview}`} aria-hidden="true">
+          <span className={styles.typeBig}>{t.label}</span>
+        </div>
         <p className={styles.desc}>{description}</p>
       </div>
       <div className={styles.footer}>

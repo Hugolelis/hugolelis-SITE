@@ -12,7 +12,6 @@ export const projects: Project[] = [
     },
     year: '2026',
     link: 'https://github.com/Hugolelis/Generator-API',
-    image: '/projects/generator-api.png',
   },
   {
     id: 2,
@@ -25,7 +24,6 @@ export const projects: Project[] = [
     },
     year: '2026',
     link: 'https://github.com/Hugolelis/YT_Downloader-CLI',
-    image: '/projects/yt-downloader.png',
   },
   {
     id: 3,
@@ -38,7 +36,6 @@ export const projects: Project[] = [
     },
     year: '2026',
     link: 'https://github.com/Hugolelis/Lexio-CLI',
-    image: '/projects/lexio.png',
   },
   {
     id: 4,
@@ -51,6 +48,5 @@ export const projects: Project[] = [
     },
     year: '2026',
     link: 'https://github.com/Hugolelis/qrcode-TOOL',
-    image: '/projects/qrcode.png',
   },
 ]
