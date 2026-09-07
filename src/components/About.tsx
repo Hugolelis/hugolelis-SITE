@@ -4,9 +4,6 @@ import styles from './About.module.css'
 
 const CRTWarp = lazy(() => import('./CRTWarp'))
 
-const philosophy = ['Manutenibilidade', 'Legibilidade', 'Testabilidade', 'Segurança']
-const philosophyEn = ['Maintainability', 'Readability', 'Testability', 'Security']
-
 const interests = [
   'Engenharia de Software', 'Algoritmos', 'Estruturas de Dados',
   'Arquitetura de Sistemas', 'Performance', 'Backend', 'Visão Computacional', 'IA',
@@ -18,7 +15,6 @@ const interestsEn = [
 
 export function About() {
   const { t, lang, theme } = useApp()
-  const tags = lang === 'pt' ? philosophy : philosophyEn
   const interestTags = lang === 'pt' ? interests : interestsEn
 
   const bgSlotRef = useRef<HTMLDivElement>(null)
@@ -81,14 +77,7 @@ export function About() {
         )}
       </div>
       <div className="container">
-        <p className={styles.eyebrow}>{lang === 'pt' ? 'Filosofia de desenvolvimento' : 'Development philosophy'}</p>
         <h2 className={`section-title ${styles.title}`}>{t.about.title}</h2>
-
-        <div className={styles.philosophy}>
-          {tags.map(tag => (
-            <span key={tag} className={styles.pill}>{tag}</span>
-          ))}
-        </div>
 
         <div className={styles.body}>
           <p>{t.about.p1}</p>
