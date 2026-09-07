@@ -15,7 +15,6 @@ export const pt = {
     cta_projects: 'Ver projetos',
     cta_cv: 'Baixar currículo',
     cta_email: 'Enviar e-mail',
-    available: 'code',
   },
   about: {
     title: 'Sobre mim',

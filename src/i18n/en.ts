@@ -17,7 +17,6 @@ export const en: Translations = {
     cta_projects: 'View projects',
     cta_cv: 'Download CV',
     cta_email: 'Send email',
-    available: 'code',
   },
   about: {
     title: 'About me',
