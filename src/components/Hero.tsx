@@ -47,11 +47,7 @@ export function Hero() {
   const [animStep, setAnimStep] = useState(0)
   const [cvOpen, setCvOpen] = useState(false)
 
-  const roleValue = lang === 'pt' ? 'Desenvolvedor de Software' : 'Software Developer'
-  const displayedTitle = useTypewriter(
-    lang === 'pt' ? 'Código que escala.' : 'Code that scales.',
-    30
-  )
+  const displayedTitle = useTypewriter('Hugo de Lelis', 30)
 
   useEffect(() => {
     const timers = fields.map((_, i) =>
@@ -76,11 +72,11 @@ export function Hero() {
       <div className={styles.layout}>
 
         <div className={styles.leftCol}>
-          <p className={styles.label}>{roleValue}</p>
           <h1 className={styles.title}>
             <span className={styles.accent}>{displayedTitle}</span>
             <span className={styles.cursor}>_</span>
           </h1>
+          <p className={styles.role}>{lang === 'pt' ? 'Desenvolvedor' : 'Developer'}</p>
           <p className={styles.sub}>{t.hero.sub}</p>
           <div className={styles.cta}>
             <a href="/projetos" className="btn btn--primary">{t.hero.cta_projects}</a>
