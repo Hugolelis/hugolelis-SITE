@@ -6,32 +6,61 @@
 }
 
 .main {
-  max-width: 720px;
+  max-width: 820px;
   margin: 0 auto;
   padding: 8rem 2rem 6rem;
 }
 
 .header {
-  margin-bottom: 3rem;
-}
-
-.count {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--accent);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 0.75rem;
-  display: block;
+  margin-bottom: 3.5rem;
 }
 
 .title {
+  color: var(--text);
   font-family: var(--font-display);
   font-size: clamp(2.2rem, 5vw, 3.2rem);
   font-weight: 400;
   letter-spacing: -0.02em;
-  color: var(--text);
 }
+
+.intro {
+  max-width: 460px;
+  margin-top: 0.75rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ── Sections ── */
+
+.section + .section {
+  margin-top: 3.5rem;
+  padding-top: 3.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.sectionHeader {
+  margin-bottom: 1.5rem;
+}
+
+.count {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sectionTitle {
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+/* ── Certificates ── */
 
 .grid {
   display: flex;
@@ -131,12 +160,65 @@
   transition: color 0.2s, transform 0.2s;
 }
 
+/* ── LinkedIn ── */
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.post {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  min-height: 5rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.post:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.number {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.postTitle {
+  min-width: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.post:hover .arrow {
+  color: var(--accent);
+  transform: translate(2px, -2px);
+}
+
+.showMore {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+/* ── Shared CTA ── */
+
 .profileCta {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 3.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--border);
   color: var(--muted);
@@ -157,14 +239,14 @@
 
 @media (max-width: 900px) {
   .main { padding: 6rem 1.25rem 4rem; }
-
-  .profileCta {
-    align-items: flex-start;
-    flex-direction: column;
-  }
 }
 
 @media (max-width: 600px) {
+  .section + .section {
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+  }
+
   .card {
     align-items: flex-start;
     gap: 0.75rem;
@@ -186,5 +268,16 @@
 
   .meta {
     gap: 0.5rem;
+  }
+
+  .post {
+    grid-template-columns: 2rem 1fr auto;
+    gap: 0.75rem;
+    padding: 0.9rem 1rem;
+  }
+
+  .profileCta {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }

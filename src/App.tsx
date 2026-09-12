@@ -7,8 +7,7 @@ import deferredStyles from './components/DeferredTimeline.module.css'
 import notFoundStyles from './components/NotFound.module.css'
 
 const ProjectsPage = lazy(() => import('./pages/ProjectsPage').then(m => ({ default: m.ProjectsPage })))
-const CertificatesPage = lazy(() => import('./pages/CertificatesPage').then(m => ({ default: m.CertificatesPage })))
-const LinkedInPage = lazy(() => import('./pages/LinkedInPage').then(m => ({ default: m.LinkedInPage })))
+const MorePage = lazy(() => import('./pages/MorePage').then(m => ({ default: m.MorePage })))
 
 const Timeline = lazy(() => import('./components/Timeline').then(m => ({ default: m.Timeline })))
 
@@ -53,9 +52,8 @@ export default function App() {
   const { lang } = useApp()
   const path = window.location.pathname
   const isProjectsPage = path === '/projetos'
-  const isCertificatesPage = path === '/certificados'
-  const isLinkedInPage = path === '/linkedin'
-  const isUnknown = !isProjectsPage && !isCertificatesPage && !isLinkedInPage && path !== '/'
+  const isMorePage = path === '/mais' || path === '/certificados' || path === '/linkedin'
+  const isUnknown = !isProjectsPage && !isMorePage && path !== '/'
 
   const [showBackToTop, setShowBackToTop] = useState(false)
 
@@ -106,35 +104,18 @@ export default function App() {
     )
   }
 
-  if (isCertificatesPage) {
+  if (isMorePage) {
     return (
       <>
         <Helmet>
-          <title>{'Hugo | Certificates'}</title>
-          <meta name="description" content="Certificates by Hugo de Lelis | Software Developer." />
-          <meta property="og:title" content="Hugo | Certificates" />
+          <title>{'Hugo | More'}</title>
+          <meta name="description" content="Certificates and LinkedIn posts by Hugo de Lelis | Software Developer." />
+          <meta property="og:title" content="Hugo | More" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content={window.location.href} />
         </Helmet>
         <Suspense fallback={<Loading fullScreen />}>
-          <CertificatesPage />
-        </Suspense>
-      </>
-    )
-  }
-
-  if (isLinkedInPage) {
-    return (
-      <>
-        <Helmet>
-          <title>{'Hugo | LinkedIn'}</title>
-          <meta name="description" content="Posts by Hugo de Lelis on LinkedIn." />
-          <meta property="og:title" content="Hugo | LinkedIn" />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content={window.location.href} />
-        </Helmet>
-        <Suspense fallback={<Loading fullScreen />}>
-          <LinkedInPage />
+          <MorePage />
         </Suspense>
       </>
     )

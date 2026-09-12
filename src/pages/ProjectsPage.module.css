@@ -44,6 +44,12 @@
   display: flex;
 }
 
+.showMore {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
 .profileCta {
   display: flex;
   align-items: center;

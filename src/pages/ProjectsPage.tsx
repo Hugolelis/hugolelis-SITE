@@ -1,10 +1,14 @@
 import { Nav, ProjectCard, Reveal } from '../components'
 import { useApp } from '../context/AppContext'
 import { projects } from '../data'
+import { useShowMore } from '../hooks/useShowMore'
 import styles from './ProjectsPage.module.css'
+
+const INITIAL_COUNT = 4
 
 export function ProjectsPage() {
   const { t, lang } = useApp()
+  const { visible, remaining, showMore } = useShowMore(projects, INITIAL_COUNT)
 
   return (
     <div className={styles.page}>
@@ -17,7 +21,7 @@ export function ProjectsPage() {
             </header>
           </Reveal>
           <div className={styles.list}>
-            {projects.map((project, i) => (
+            {visible.map((project, i) => (
               <div key={project.id} style={{ animation: `fadeUp 0.4s ease ${i * 0.06}s both` }}>
                 <ProjectCard
                   project={project}
@@ -27,6 +31,13 @@ export function ProjectsPage() {
               </div>
             ))}
           </div>
+          {remaining > 0 && (
+            <div className={styles.showMore}>
+              <button className="btn btn--ghost" onClick={showMore}>
+                {lang === 'pt' ? `Ver mais (${remaining})` : `Show more (${remaining})`}
+              </button>
+            </div>
+          )}
           <div className={styles.profileCta}>
             <span>{lang === 'pt' ? 'Quer ver meu perfil?' : 'Want to see my profile?'}</span>
             <a href="https://github.com/Hugolelis" target="_blank" rel="noreferrer">

@@ -2,6 +2,24 @@ import type { Project } from '../types'
 
 export const projects: Project[] = [
   {
+    id: 4,
+    title: { pt: 'QrCode', en: 'QrCode' },
+    tag: 'C++ · Reed-Solomon · Galois Field',
+    type: 'TOOL',
+    description: {
+      pt: [
+        'Codificação Reed-Solomon e aritmética em corpo de Galois implementadas do zero',
+        'Montagem da matriz e exportação para PNG/PBM, sem bibliotecas externas',
+      ],
+      en: [
+        'Reed-Solomon error correction and Galois field arithmetic implemented from scratch',
+        'Matrix placement and PNG/PBM export, with no external libraries',
+      ],
+    },
+    year: '2026',
+    link: 'https://github.com/Hugolelis/qrcode-TOOL',
+  },
+  {
     id: 1,
     title: { pt: 'Generator', en: 'Generator' },
     tag: 'Node.js · TypeScript · PostgreSQL',
@@ -18,24 +36,6 @@ export const projects: Project[] = [
     },
     year: '2026',
     link: 'https://github.com/Hugolelis/Generator-API',
-  },
-  {
-    id: 2,
-    title: { pt: 'YT Downloader', en: 'YT Downloader' },
-    tag: 'Python · yt-dlp · Typer',
-    type: 'CLI',
-    description: {
-      pt: [
-        'Download de vídeo e áudio do YouTube direto do terminal',
-        'Seleção de qualidade e extração em MP3, construído com yt-dlp e Typer',
-      ],
-      en: [
-        'Downloads YouTube video and audio directly from the terminal',
-        'Quality selection and MP3 extraction, built with yt-dlp and Typer',
-      ],
-    },
-    year: '2026',
-    link: 'https://github.com/Hugolelis/YT_Downloader-CLI',
   },
   {
     id: 3,
@@ -56,21 +56,21 @@ export const projects: Project[] = [
     link: 'https://github.com/Hugolelis/Lexio-CLI',
   },
   {
-    id: 4,
-    title: { pt: 'QrCode', en: 'QrCode' },
-    tag: 'C++ · Reed-Solomon · Galois Field',
-    type: 'TOOL',
+    id: 2,
+    title: { pt: 'YT Downloader', en: 'YT Downloader' },
+    tag: 'Python · yt-dlp · Typer',
+    type: 'CLI',
     description: {
       pt: [
-        'Codificação Reed-Solomon e aritmética em corpo de Galois implementadas do zero',
-        'Montagem da matriz e exportação para PNG/PBM, sem bibliotecas externas',
+        'Download de vídeo e áudio do YouTube direto do terminal',
+        'Seleção de qualidade e extração em MP3, construído com yt-dlp e Typer',
       ],
       en: [
-        'Reed-Solomon error correction and Galois field arithmetic implemented from scratch',
-        'Matrix placement and PNG/PBM export, with no external libraries',
+        'Downloads YouTube video and audio directly from the terminal',
+        'Quality selection and MP3 extraction, built with yt-dlp and Typer',
       ],
     },
     year: '2026',
-    link: 'https://github.com/Hugolelis/qrcode-TOOL',
+    link: 'https://github.com/Hugolelis/YT_Downloader-CLI',
   },
 ]

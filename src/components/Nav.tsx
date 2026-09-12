@@ -3,7 +3,8 @@ import { useApp } from '../context/AppContext'
 import { useScrollY } from '../hooks/useScrollY'
 import styles from './Nav.module.css'
 
-const SUB_PAGES = ['/projetos', '/certificados', '/linkedin'] as const
+const SUB_PAGES = ['/projetos', '/certificados', '/linkedin', '/mais'] as const
+const MORE_PAGES = ['/mais', '/certificados', '/linkedin'] as const
 
 export function Nav() {
   const { t, theme, toggleTheme, lang, toggleLang } = useApp()
@@ -14,6 +15,7 @@ export function Nav() {
   const mobileMenuRef = useRef<HTMLDivElement>(null)
   const currentPath = window.location.pathname
   const onSubPage = SUB_PAGES.some(page => currentPath === page)
+  const onMorePage = MORE_PAGES.some(page => currentPath === page)
 
   const closeMenu = () => setMenuOpen(false)
 
@@ -71,8 +73,7 @@ export function Nav() {
           <div className={styles.links}>
             <a href={onSubPage ? '/#hero' : '#hero'} className={currentPath === '/' ? styles.active : undefined} aria-current={currentPath === '/' ? 'page' : undefined}>{t.nav.about}</a>
             <a href="/projetos" className={currentPath === '/projetos' ? styles.active : undefined} aria-current={currentPath === '/projetos' ? 'page' : undefined}>{t.nav.projects}</a>
-            <a href="/certificados" className={currentPath === '/certificados' ? styles.active : undefined} aria-current={currentPath === '/certificados' ? 'page' : undefined}>{t.nav.certificates}</a>
-            <a href="/linkedin" className={currentPath === '/linkedin' ? styles.active : undefined} aria-current={currentPath === '/linkedin' ? 'page' : undefined}>LinkedIn</a>
+            <a href="/mais" className={onMorePage ? styles.active : undefined} aria-current={onMorePage ? 'page' : undefined}>{t.nav.more}</a>
             <button className={styles.contactTrigger} onClick={() => setContactOpen(true)}>
               {t.nav.media}
             </button>
@@ -123,8 +124,7 @@ export function Nav() {
         <div ref={mobileMenuRef} id="mobile-navigation" className={styles.mobileMenu}>
           <a href={onSubPage ? '/#hero' : '#hero'} className={currentPath === '/' ? styles.active : undefined} aria-current={currentPath === '/' ? 'page' : undefined} onClick={closeMenu}>{t.nav.about}</a>
           <a href="/projetos" className={currentPath === '/projetos' ? styles.active : undefined} aria-current={currentPath === '/projetos' ? 'page' : undefined} onClick={closeMenu}>{t.nav.projects}</a>
-          <a href="/certificados" className={currentPath === '/certificados' ? styles.active : undefined} aria-current={currentPath === '/certificados' ? 'page' : undefined} onClick={closeMenu}>{t.nav.certificates}</a>
-          <a href="/linkedin" className={currentPath === '/linkedin' ? styles.active : undefined} aria-current={currentPath === '/linkedin' ? 'page' : undefined} onClick={closeMenu}>LinkedIn</a>
+          <a href="/mais" className={onMorePage ? styles.active : undefined} aria-current={onMorePage ? 'page' : undefined} onClick={closeMenu}>{t.nav.more}</a>
           <button
             className={styles.mobileContactTrigger}
             onClick={() => {
