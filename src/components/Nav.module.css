@@ -150,6 +150,9 @@
 }
 
 .toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: none;
   border: 1px solid var(--border);
   color: var(--muted);

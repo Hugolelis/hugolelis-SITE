@@ -17,13 +17,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>(() => {
     const saved = localStorage.getItem('theme')
     if (saved === 'light' || saved === 'dark') return saved
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    return 'light'
   })
 
   const [lang, setLang] = useState<Lang>(() => {
     const saved = localStorage.getItem('lang')
     if (saved === 'pt' || saved === 'en') return saved
-    return navigator.language.startsWith('pt') ? 'pt' : 'en'
+    return 'en'
   })
 
   useEffect(() => {
