@@ -3,12 +3,17 @@ export interface LocalizedText {
   en: string
 }
 
+export interface LocalizedList {
+  pt: string[]
+  en: string[]
+}
+
 export interface Project {
   id: number
   title: LocalizedText
   tag: string
   type: 'API' | 'CLI' | 'WEB' | 'LIB' | 'TOOL' | 'OTHER'
-  description: LocalizedText
+  description: LocalizedList
   year: string
   link?: string
   deploy?: string
@@ -29,7 +34,7 @@ export interface TimelineEntry {
   type: LocalizedText
   role: LocalizedText
   place: LocalizedText
-  description: LocalizedText
+  description: LocalizedList
 }
 
 export interface LinkedInPost {

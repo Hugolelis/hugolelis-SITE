@@ -61,7 +61,11 @@ export function Timeline() {
                   </span>
                   <h3 className={styles.role}>{item.role[lang]}</h3>
                   <p className={styles.place}>{item.place[lang]}</p>
-                  <p className={styles.desc}>{item.description[lang]}</p>
+                  <ul className={styles.desc}>
+                    {item.description[lang].map((line, j) => (
+                      <li key={j}>{line}</li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             )

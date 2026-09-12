@@ -113,10 +113,26 @@
 }
 
 .desc {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  max-width: 100%;
+  list-style: none;
+}
+
+.desc li {
+  position: relative;
+  padding-left: 0.9rem;
   color: var(--muted);
   font-size: 0.8rem;
-  max-width: 100%;
   line-height: 1.45;
+}
+
+.desc li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--muted);
 }
 
 /* ── Footer ── */

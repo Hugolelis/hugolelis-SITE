@@ -18,9 +18,9 @@ export const pt = {
   },
   about: {
     title: 'Sobre mim',
-    p1: 'Desenvolvedor de software com foco em construção de soluções bem estruturadas, eficientes e sustentáveis ao longo do tempo.',
-    p2: 'Tenho experiência prática com Python, C++, TypeScript/Node.js, bancos de dados, Docker, Git e desenvolvimento backend, atuando na implementação de funcionalidades, integração entre sistemas, testes, depuração e melhoria contínua de código.',
-    p3: 'Gosto de trabalhar próximo ao código, entender problemas a fundo e buscar soluções simples, legíveis e confiáveis. Busco evoluir constantemente por meio de projetos práticos, desafios técnicos e colaboração com outros desenvolvedores, sempre priorizando qualidade de código e boas práticas de desenvolvimento.',
+    p1: 'Desenvolvedor backend, com foco em arquitetura de sistemas e experiência prática também em visão computacional e IA. Estou no mercado desde 2024, projetando APIs, integrando sistemas e cuidando do ciclo completo de aplicações web, do planejamento ao deploy.',
+    p2: 'Gosto de entender problemas até a raiz, não só resolvê-los na superfície. Isso me leva a construir coisas do zero em vez de só integrar bibliotecas prontas. Um dos meus projetos, por exemplo, é um gerador de QR Code em C++ com correção de erros Reed-Solomon e aritmética em corpo de Galois implementadas manualmente, só pra entender a especificação de verdade.',
+    p3: 'Tive meu primeiro contato com programação em 2023, classificado numa competição de programação em Python no Inatel. Hoje curso Sistemas de Informação na UniFoa e busco projetos que me exijam pensar em arquitetura, performance e decisão real, não só entregar funcionalidade.',
   },
   projects: {
     title: 'Projetos',

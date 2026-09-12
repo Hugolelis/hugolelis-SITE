@@ -7,8 +7,14 @@ export const projects: Project[] = [
     tag: 'Node.js · TypeScript · PostgreSQL',
     type: 'API',
     description: {
-      pt: 'API REST robusta com geração de CPF, encurtador de URL, gerador de senhas, UUID, serviços de data e números sorteados.',
-      en: 'Robust REST API offering CPF generation, URL shortener, password generator, UUID, date services and sorted numbers.',
+      pt: [
+        'Geração de CPF, senha, UUID e números sorteados',
+        'Encurtador de URL e serviços de data via REST API em Node.js/TypeScript',
+      ],
+      en: [
+        'CPF, password, UUID, and sorted number generation',
+        'URL shortener and date services via a REST API in Node.js/TypeScript',
+      ],
     },
     year: '2026',
     link: 'https://github.com/Hugolelis/Generator-API',
@@ -19,8 +25,14 @@ export const projects: Project[] = [
     tag: 'Python · yt-dlp · Typer',
     type: 'CLI',
     description: {
-      pt: 'Ferramenta de linha de comando para baixar vídeos e áudios do YouTube direto do terminal, com seleção de qualidade e extração em MP3.',
-      en: 'CLI tool to download YouTube videos and audio directly from the terminal, with quality selection and MP3 extraction.',
+      pt: [
+        'Download de vídeo e áudio do YouTube direto do terminal',
+        'Seleção de qualidade e extração em MP3, construído com yt-dlp e Typer',
+      ],
+      en: [
+        'Downloads YouTube video and audio directly from the terminal',
+        'Quality selection and MP3 extraction, built with yt-dlp and Typer',
+      ],
     },
     year: '2026',
     link: 'https://github.com/Hugolelis/YT_Downloader-CLI',
@@ -31,8 +43,14 @@ export const projects: Project[] = [
     tag: 'Python · Typer · pymupdf · rich',
     type: 'CLI',
     description: {
-      pt: 'CLI para análise de contexto textual, com extração de termos, frequência léxica e estatísticas de corpus.',
-      en: 'CLI for textual context analysis, featuring term extraction, lexical frequency, and corpus statistics.',
+      pt: [
+        'Análise léxica de textos e PDFs, com extração de termos e frequência',
+        'Estatísticas de corpus via CLI em Python com Typer e rich',
+      ],
+      en: [
+        'Lexical analysis of text and PDF files, with term extraction and frequency',
+        'Corpus statistics via a Python CLI built with Typer and rich',
+      ],
     },
     year: '2026',
     link: 'https://github.com/Hugolelis/Lexio-CLI',
@@ -43,8 +61,14 @@ export const projects: Project[] = [
     tag: 'C++ · Reed-Solomon · Galois Field',
     type: 'TOOL',
     description: {
-      pt: 'Gerador de QR Code em C++ implementado do zero, com codificação Reed-Solomon, aritmética em corpo de Galois, montagem da matriz e exportação para PNG/PBM.',
-      en: 'QR Code generator built from scratch in C++, implementing Reed-Solomon error correction, Galois field arithmetic, matrix placement, and PNG/PBM export.',
+      pt: [
+        'Codificação Reed-Solomon e aritmética em corpo de Galois implementadas do zero',
+        'Montagem da matriz e exportação para PNG/PBM, sem bibliotecas externas',
+      ],
+      en: [
+        'Reed-Solomon error correction and Galois field arithmetic implemented from scratch',
+        'Matrix placement and PNG/PBM export, with no external libraries',
+      ],
     },
     year: '2026',
     link: 'https://github.com/Hugolelis/qrcode-TOOL',

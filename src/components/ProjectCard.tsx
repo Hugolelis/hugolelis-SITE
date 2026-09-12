@@ -37,7 +37,11 @@ export function ProjectCard({ project, lang, translations }: Props) {
         <div className={`${styles.media} ${t.preview}`} aria-hidden="true">
           <span className={styles.typeBig}>{t.label}</span>
         </div>
-        <p className={styles.desc}>{description}</p>
+        <ul className={styles.desc}>
+          {description.map((line, i) => (
+            <li key={i}>{line}</li>
+          ))}
+        </ul>
       </div>
       <div className={styles.footer}>
         {project.link && (
